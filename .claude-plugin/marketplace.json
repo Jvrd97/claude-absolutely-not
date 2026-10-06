@@ -1,0 +1,15 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "absolutely-not",
+  "description": "absolutely-not: a tone rule, opener stripping and a tic counter against sycophancy in Claude Code",
+  "owner": { "name": "Daniil Bystrov", "url": "https://github.com/Jvrd97" },
+  "plugins": [
+    {
+      "name": "absolutely-not",
+      "description": "Stop \"You're absolutely right!\": a tone rule in the system prompt, praise openers stripped from what the model reads back, and /tics to count the rest.",
+      "source": "./",
+      "category": "productivity",
+      "homepage": "https://github.com/Jvrd97/claude-absolutely-not"
+    }
+  ]
+}

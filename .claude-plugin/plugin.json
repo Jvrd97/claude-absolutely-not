@@ -1,0 +1,43 @@
+{
+  "name": "absolutely-not",
+  "version": "0.1.0",
+  "description": "Stop \"You're absolutely right!\": a tone rule in the system prompt, praise openers stripped from what the model reads back, and /tics to count the ones that still get through.",
+  "author": { "name": "Daniil Bystrov", "url": "https://github.com/Jvrd97" },
+  "homepage": "https://github.com/Jvrd97/claude-absolutely-not",
+  "repository": "https://github.com/Jvrd97/claude-absolutely-not",
+  "license": "MIT",
+  "keywords": ["mod", "sycophancy", "tone", "system-prompt", "verbal-tics"],
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "rule": {
+      "type": "boolean",
+      "title": "Tone rule",
+      "description": "Add a short section to the system prompt: no praise or agreement openers, say so when the user is wrong, no filler closers, never the banned words.",
+      "default": true
+    },
+    "strip": {
+      "type": "boolean",
+      "title": "Strip openers",
+      "description": "Remove a leading praise opener (\"You're absolutely right!\", \"Great question!\") from each response before it is stored, so the model does not read its own tic back and repeat it.",
+      "default": true
+    },
+    "bannedWords": {
+      "type": "string",
+      "title": "Banned words",
+      "description": "Comma-separated words the rule forbids and /tics counts. Empty turns the word list off.",
+      "default": "load-bearing, delve, seamless, robust, leverage, comprehensive"
+    },
+    "extraOpeners": {
+      "type": "string",
+      "title": "Extra openers",
+      "description": "Comma-separated openers to strip and count on top of the built-in ones, for example: Great catch, Excellent question.",
+      "default": ""
+    },
+    "status": {
+      "type": "boolean",
+      "title": "Status line",
+      "description": "Show \"tics: N\" for this session in the status line.",
+      "default": false
+    }
+  }
+}
